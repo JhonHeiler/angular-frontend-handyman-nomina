@@ -1,0 +1,45 @@
+<div class="service-report">
+  <div class="service-report__content service-report__content--left">
+    <app-form-hour-worked (query)="getServiceConsult($event)"></app-form-hour-worked>
+  </div>
+  <div class="service-report__content service-report__content--right">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource.length">
+      <!-- Name Column -->
+      <ng-container matColumnDef="Identificación">
+        <th mat-header-cell *matHeaderCellDef>Identificación</th>
+        <td mat-cell *matCellDef="let element">{{ element.idtechnical }}</td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="Hora normal">
+        <th mat-header-cell *matHeaderCellDef>Normales</th>
+        <td mat-cell *matCellDef="let element">{{ element.normalHours }}</td>
+      </ng-container>
+      <ng-container matColumnDef="Hora nocturna">
+        <th mat-header-cell *matHeaderCellDef>Noturna</th>
+        <td mat-cell *matCellDef="let element">{{ element.nightHours }}</td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="Hora dominicales">
+        <th mat-header-cell *matHeaderCellDef>Dominicales</th>
+        <td mat-cell *matCellDef="let element">{{ element.sundayHours}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Hora normales extra">
+        <th mat-header-cell *matHeaderCellDef>Normales extra</th>
+        <td mat-cell *matCellDef="let element">{{ element.normalOvertime }}</td>
+      </ng-container>
+      <ng-container matColumnDef="Hora noturna extra">
+        <th mat-header-cell *matHeaderCellDef>Noturna extra</th>
+        <td mat-cell *matCellDef="let element">{{ element.extraNightHours }}</td>
+      </ng-container>
+      <ng-container matColumnDef="Hora dominicales extra">
+        <th mat-header-cell *matHeaderCellDef>Dominicales extra</th>
+        <td mat-cell *matCellDef="let element">{{ element.extraSundayHours }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

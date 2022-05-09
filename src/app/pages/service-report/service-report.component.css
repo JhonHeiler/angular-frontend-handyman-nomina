@@ -1,0 +1,20 @@
+.service-report{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.service-report__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+}
+
+.service-report__content:nth-child(1){
+    background-color: #fff;
+}

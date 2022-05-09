@@ -1,0 +1,36 @@
+<form class="example-form">
+  <h2>Registrar servicio</h2>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Técnico del servicio</mat-label>
+    <input matInput name="idTechnical" [(ngModel)]="service.idTechnical"/>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Servicio</mat-label>
+    <input matInput name="idService" [(ngModel)]="service.idService"/>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Fecha y hora de inicio</mat-label>
+    <input
+      type="datetime-local"
+      matInput
+      name="startDate"
+      [(ngModel)]="service.startDate"
+    />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Fecha y hora de finalización</mat-label>
+    <input
+      type="datetime-local"
+      matInput
+      name="endDate"
+      [(ngModel)]="service.endDate"
+    />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="register()">
+    Registrar
+  </button>
+</form>

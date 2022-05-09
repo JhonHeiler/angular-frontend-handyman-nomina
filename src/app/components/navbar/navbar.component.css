@@ -1,0 +1,40 @@
+nav{
+    display: flex;
+    align-items: center;
+    background-color: #202E48;
+    padding: 0.5rem 4rem;
+}
+
+img{
+    height: 4rem;
+    border-radius: 50%;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 100%;
+    margin-top: auto;
+}
+
+li{
+    margin-right: 20px;
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.active-link{
+    background-color: #0779BE;
+    margin-right: 20px;
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}

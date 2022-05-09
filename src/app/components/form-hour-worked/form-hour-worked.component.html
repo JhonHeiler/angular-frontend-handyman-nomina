@@ -1,0 +1,17 @@
+<form class="example-form">
+    <h2>Consultar servicio</h2>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Identificacion del tecnico</mat-label>
+      <input matInput type="number" name="idTechnical" [(ngModel)]="serviceQuery.idTechnical" />
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Numero de semana</mat-label>
+      <input matInput type="number" name="weekNumber" [(ngModel)]="serviceQuery.weekNumber" />
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="getReport()">
+      Consultar
+    </button>
+  </form>
+  
